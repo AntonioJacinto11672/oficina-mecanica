@@ -188,10 +188,10 @@ if (isset($_SESSION['idlogado'])) {
                                     <td><?php echo $valorForm['telefone']; ?></td>
                                     <td><?php echo $valorForm['email']; ?></td>
                                     <td>
-                                        <a href="<?php echo $valorForm['idrecepcionista']; ?>" data-toggle="modal" data-target="#edit<?php echo $valorForm['idrecepcionista']; ?>"><i class="ico icofont-edit px-2"></i></a>
-                                        <a href="<?php echo $valorForm['idrecepcionista']; ?>" data-toggle="modal" data-target="#delete<?php echo $valorForm['idrecepcionista']; ?>"><i class="ico icofont-trash text-danger"></i></a>
+                                        <a href="<?php echo $valorForm['idrecepcionista']; ?>" data-toggle="modal" data-target="#edit<?php echo $valorForm['idrecepcionista']; ?>"><i class="icofont icofont-edit px-2"></i></a>
+                                        <a href="<?php echo $valorForm['idrecepcionista']; ?>" data-toggle="modal" data-target="#delete<?php echo $valorForm['idrecepcionista']; ?>"><i class="icofont icofont-trash text-danger"></i></a>
                                         <a href="<?php echo $valorForm['idrecepcionista']; ?>" data-toggle="modal" data-target="#ativar<?php echo $valorForm['idrecepcionista']; ?>"><i class="fas fa-check-square <?php
-                                            if ($valorForm['st_conta'] == "Ativada") {
+                                            if (isset($valorForm['st_conta']) && $valorForm['st_conta'] == "Ativada") {
                                                 echo "text-success";
                                             } else {
                                                 echo "text-danger";
@@ -202,14 +202,14 @@ if (isset($_SESSION['idlogado'])) {
                             <div class="modal fade" id="ativar<?php echo $valorForm['idrecepcionista']; ?>">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
-                                        <div class="modal-header <?php if ($valorForm['st_conta'] == "Ativada") { ?>
+                                        <div class="modal-header <?php if (isset($valorForm['st_conta']) && $valorForm['st_conta'] == "Ativada") { ?>
                                                  bg-danger
                                              <?php } else { ?>
                                                  bg-success
                                              <?php }
                                              ?>">
                                             <h4 class="modal-title">
-                                                <?php if ($valorForm['st_conta'] == "Ativada") { ?>
+                                                <?php if (isset($valorForm['st_conta']) && $valorForm['st_conta'] == "Ativada") { ?>
                                                     Desativar Conta
                                                 <?php } else { ?>
                                                     Ativar Conta
@@ -222,12 +222,12 @@ if (isset($_SESSION['idlogado'])) {
                                         </div>
                                         <div class="modal-body">
                                             <p>Tens A Certeza Que Queres
-                                                <?php if ($valorForm['st_conta'] == "Ativada") { ?>
-                                                    Desativar 
+                                                <?php if (isset($valorForm['st_conta']) && $valorForm['st_conta'] == "Ativada") { ?>
+                                                    Desativar
                                                 <?php } else { ?>
-                                                    Ativar 
+                                                    Ativar
                                                 <?php }
-                                                ?> Esse Secretario <?php echo $valorForm['nome'] . " " . $valorForm['sobrenome']; ?>&hellip;</p>
+                                                ?> Esse Recepcionista <?php echo $valorForm['nome'] . " " . $valorForm['sobrenome']; ?>&hellip;</p>
                                         </div>
                                         <div class="modal-footer">
                                             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
@@ -236,8 +236,9 @@ if (isset($_SESSION['idlogado'])) {
                                                 <input type="hidden" name="email" value="<?php echo $valorForm['email']; ?>">
                                                 <input type="hidden" name="nbi" value="<?php echo $valorForm['nbi']; ?>">
                                                 <input type="hidden" name="nif" value="<?php echo $valorForm['nif']; ?>">
-                                                <input type="hidden" name="st_conta" value="<?php echo $valorForm['st_conta']; ?>">
-                                                <?php if ($valorForm['st_conta'] == "Ativada") { ?>
+                                                <input type="hidden" name="usuario" value="Recep">
+                                                <input type="hidden" name="st_conta" value="<?php echo isset($valorForm['st_conta']) ? $valorForm['st_conta'] : ''; ?>">
+                                                <?php if (isset($valorForm['st_conta']) && $valorForm['st_conta'] == "Ativada") { ?>
                                                     <button class="btn btn-danger col-md-3" name="btnAtivarConta">Sim Desativar</button>
                                                 <?php } else { ?>
                                                     <button class="btn btn-success col-md-3" name="btnAtivarConta">Sim Ativar</button>

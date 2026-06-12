@@ -36,18 +36,20 @@ class ConfigController {
     }
 
     private function config() {
-        define("NOME_OFICINA", "OFICINA DO BAIRRO");
-        define('URLADM', "http://localhost/oficinamecanica.co.ao/");
-        define('ENDERECO_OFICINA', "Luanda Rua da CTT, Rangel");
-        define("EMAIL_OFICINA", "antjacinto11672@gmail.com");
-        define("TELEFONE", "+244 931 950 857");
-        define('NIVEL_STOQUE', 5); // A Partir De X Produtos O Nível de Estoue Estará Baixo
-        define('DESCONTO_ORC', "SIM");
-        define('VALOR_DESCONTO', 0.05); // Valor Em Percetagem, Por Exemplo 5 vai ser 5%
-        define('VALIDAR_ORCAMENTO_DIAS', 5);
-        define('EXCLUIR_ORCAMENTO_DIAS', 15); // Excluir Orçamento após 15 dias orcamento que estiver Aberto
-        define('COMISSAO_MECANICO', "SIM"); // Se não Existir Comissão no Sistema Muda Para Não
-        define('VALOR_COMISSAO', 0.30);  // Colocar o vaor da comissão com a percetangem matendo 0 na frente, 0.30  corresponde a 30%
+        $config = \Core\Config::load();
+        define("NOME_OFICINA", $config['APP_NAME'] ?? "OFICINA DO BAIRRO");
+        define('URLADM', $config['APP_URL'] ?? "http://localhost/oficinamecanica.co.ao/");
+        define('ENDERECO_OFICINA', $config['OFFICE_ADDRESS'] ?? "Luanda Rua da CTT, Rangel");
+        define("EMAIL_OFICINA", $config['OFFICE_EMAIL'] ?? "antjacinto11672@gmail.com");
+        define("TELEFONE", $config['OFFICE_PHONE'] ?? "+244 931 950 857");
+        define('NIVEL_STOQUE', (int)($config['STOCK_LEVEL'] ?? 5)); // A Partir De X Produtos O Nível de Estoue Estará Baixo
+        define('DESCONTO_ORC', $config['DISCOUNT_ORC'] ?? "SIM");
+        define('VALOR_DESCONTO', (float)($config['DISCOUNT_VALUE'] ?? 0.05)); // Valor Em Percetagem, Por Exemplo 5 vai ser 5%
+        define('VALIDAR_ORCAMENTO_DIAS', (int)($config['VALIDATE_QUOTE_DAYS'] ?? 5));
+        define('EXCLUIR_ORCAMENTO_DIAS', (int)($config['DELETE_QUOTE_DAYS'] ?? 15)); // Excluir Orçamento após 15 dias orcamento que estiver Aberto
+        define('COMISSAO_MECANICO', $config['MECHANIC_COMMISSION'] ?? "SIM"); // Se não Existir Comissão no Sistema Muda Para Não
+        define('VALOR_COMISSAO', (float)($config['COMMISSION_VALUE'] ?? 0.30));  // Colocar o vaor da comissão com a percetangem matendo 0 na frente, 0.30  corresponde a 30%
+        define('DEBUG_MODE', $config['DEBUG'] === 'true' ? true : false);
 
         define('DIAS_ALERTA_RETORNO', 180); // Dias para Avisar  A recepção que o veiculo não retorna ao serviço a  Alerta Após 180 dias
         define('MENAGEM_RETORNO', "Vimos quee já faz um tempo que não fazemos nenhum

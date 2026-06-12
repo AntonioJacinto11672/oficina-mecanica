@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 if (!defined('R4F5CC')) {
     header("Location: /");
     die("Erro: Página não encontrada!");
@@ -221,7 +221,7 @@ if (isset($_SESSION['idlogado'])) {
                                             ?>
                                             <?php echo $mecanico; ?></td>
                                         <td>
-                                            <a href="<?php echo $valorForm['idorcamentos']; ?>" data-toggle="modal" data-target="#enviar<?php echo $valorForm['idorcamentos']; ?>" title="Imprimir Relatório"><i class="ico icofont-file-text text-success px-1"></i></a>
+                                            <a href="<?php echo $valorForm['idorcamentos']; ?>" data-toggle="modal" data-target="#enviar<?php echo $valorForm['idorcamentos']; ?>" title="Imprimir Relatório"><i class="icofont icofont-file-text text-success px-1"></i></a>
                                         </td>
                                     </tr>
                                 <?php } ?>

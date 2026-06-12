@@ -55,7 +55,7 @@ class AdmsLogin extends Conn {
                 if ($this->resultadoBd['st_conta'] == "Ativada") {
 
 
-                    //var_dump($this->resultadoBd);
+                    var_dump($this->resultadoBd);
                     $_SESSION['logado'] = true;
                     $_SESSION['usuario'] = $this->resultadoBd['nivel'];
                     $_SESSION['idlogado'] = $this->resultadoBd['idusuario'];

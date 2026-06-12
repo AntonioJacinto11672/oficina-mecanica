@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 if (!defined('R4F5CC')) {
     header("Location: /");
     die("Erro: Página não encontrada!");
@@ -247,13 +247,13 @@ if (isset($_SESSION['idlogado'])) {
                                         <?php echo $mecanico; ?></td>
                                     <td>
         <?php if ($valorForm['status'] == "Aberto") { ?>
-                                            <a href="<?php echo $valorForm['idorcamentos']; ?>" data-toggle="modal" data-target="#edit<?php echo $valorForm['idorcamentos']; ?>" title="Editar Registo"><i class="ico icofont-edit px-1"></i></a>
-                                            <a href="<?php echo $valorForm['idorcamentos']; ?>" data-toggle="modal" data-target="#delete<?php echo $valorForm['idorcamentos']; ?>" title="Apagar Registo"><i class="ico icofont-trash text-danger px-1"></i></a>
-                                            <a href="<?php echo URLADM . "addProdutoOrcamento?id=" . $valorForm['idorcamentos'] . "&cliente=" . $valorForm['nif']; ?>" title="Adicionar Produto"><i class="ico icofont-plus text-success px-2"></i></a>
-                                            <a href="<?php echo URLADM . "relatorioMecanica?relatorio=orcamento&idorcamentos=" . $valorForm['idorcamentos']; ?>" title="Imprimir Relatório"><i class="ico icofont-file-text text-success px-1"></i></a>
-                                            <a href="" data-toggle="modal" data-target="#enviar<?php echo $valorForm['idorcamentos']; ?>" title="Enviar Email"><i class="ico icofont-envelope text-success px-1"></i></a>
+                                            <a href="<?php echo $valorForm['idorcamentos']; ?>" data-toggle="modal" data-target="#edit<?php echo $valorForm['idorcamentos']; ?>" title="Editar Registo"><i class="icofont icofont-edit px-1"></i></a>
+                                            <a href="<?php echo $valorForm['idorcamentos']; ?>" data-toggle="modal" data-target="#delete<?php echo $valorForm['idorcamentos']; ?>" title="Apagar Registo"><i class="icofont icofont-trash text-danger px-1"></i></a>
+                                            <a href="<?php echo URLADM . "addProdutoOrcamento?id=" . $valorForm['idorcamentos'] . "&cliente=" . $valorForm['nif']; ?>" title="Adicionar Produto"><i class="icofont icofont-plus text-success px-2"></i></a>
+                                            <a href="<?php echo URLADM . "relatorioMecanica?relatorio=orcamento&idorcamentos=" . $valorForm['idorcamentos']; ?>" title="Imprimir Relatório"><i class="icofont icofont-file-text text-success px-1"></i></a>
+                                            <a href="" data-toggle="modal" data-target="#enviar<?php echo $valorForm['idorcamentos']; ?>" title="Enviar Email"><i class="icofont icofont-envelope text-success px-1"></i></a>
                                         <?php } else { ?>
-                                            <a href="<?php echo URLADM . "relatorioMecanica?relatorio=orcamento&idorcamentos=" . $valorForm['idorcamentos']; ?>"  title="Imprimir Relatório"><i class="ico icofont-file-text text-success px-1"></i></a>
+                                            <a href="<?php echo URLADM . "relatorioMecanica?relatorio=orcamento&idorcamentos=" . $valorForm['idorcamentos']; ?>"  title="Imprimir Relatório"><i class="icofont icofont-file-text text-success px-1"></i></a>
         <?php } ?>
 
                                     </td>

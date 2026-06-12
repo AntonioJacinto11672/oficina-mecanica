@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 namespace App\adms\Controllers;
 
@@ -287,11 +287,11 @@ if (isset($_SESSION['idlogado'])) {
                                     <td><?php echo $valorForm['modelo']; ?></td>
                                     <td><?php echo $valorForm['cor']; ?></td>
                                     <td>
-                                        <a href="<?php echo $valorForm['idveiculo']; ?>" data-toggle="modal" data-target="#edit<?php echo $valorForm['idveiculo']; ?>"><i class="ico icofont-edit px-1"></i></a>
-                                        <a href="<?php echo $valorForm['idveiculo']; ?>" data-toggle="modal" data-target="#delete<?php echo $valorForm['idveiculo']; ?>"><i class="ico icofont-trash text-danger px-1"></i></a>
-                                        <a href="<?php echo $valorForm['idveiculo']; ?>" data-toggle="modal" data-target="#info<?php echo $valorForm['idveiculo']; ?>"><i class="ico icofont-warning-alt text-info px-1"></i></a>
-<!--                                        <a href="<?php echo $valorForm['idveiculo']; ?>" data-toggle="modal" data-target="#info<?php echo $valorForm['idveiculo']; ?>" title="Relatório do Serviço do Carro"><i class="ico icofont-envelope-open text-info px-1"></i></a>
-                                        <a href="<?php echo $valorForm['idveiculo']; ?>" data-toggle="modal" data-target="#info<?php echo $valorForm['idveiculo']; ?>" title="Relatório do Ultimo Serviço"><i class="ico icofont-envelope text-info"></i></a>-->
+                                        <a href="<?php echo $valorForm['idveiculo']; ?>" data-toggle="modal" data-target="#edit<?php echo $valorForm['idveiculo']; ?>"><i class="icofont icofont-edit px-1"></i></a>
+                                        <a href="<?php echo $valorForm['idveiculo']; ?>" data-toggle="modal" data-target="#delete<?php echo $valorForm['idveiculo']; ?>"><i class="icofont icofont-trash text-danger px-1"></i></a>
+                                        <a href="<?php echo $valorForm['idveiculo']; ?>" data-toggle="modal" data-target="#info<?php echo $valorForm['idveiculo']; ?>"><i class="icofont icofont-warning-alt text-info px-1"></i></a>
+<!--                                        <a href="<?php echo $valorForm['idveiculo']; ?>" data-toggle="modal" data-target="#info<?php echo $valorForm['idveiculo']; ?>" title="Relatório do Serviço do Carro"><i class="icofont icofont-envelope-open text-info px-1"></i></a>
+                                        <a href="<?php echo $valorForm['idveiculo']; ?>" data-toggle="modal" data-target="#info<?php echo $valorForm['idveiculo']; ?>" title="Relatório do Ultimo Serviço"><i class="icofont icofont-envelope text-info"></i></a>-->
                                     </td>
                                 </tr>
                                 <!--  Modal Deletar-->

@@ -24,9 +24,10 @@ if (!defined('R4F5CC')) {
 <!-- End of Page Wrapper -->
 
 <!-- Scroll to Top Button-->
-<a class="scroll-to-top rounded" href="">
+<a class="scroll-to-top rounded" href="#">
     <i class="fas fa-angle-up"></i>
 </a>
+
 <!-- Logout Modal-->
 <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
      aria-hidden="true">
@@ -47,35 +48,36 @@ if (!defined('R4F5CC')) {
     </div>
 </div>
 
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<!--        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>-->
-<script src="<?php URLADM; ?>app/adms/assets/vendor/jquery/jquery.min.js"></script>
-<script src="<?php URLADM; ?>app/adms/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="<?php URLADM; ?>app/adms/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-<script src="<?php URLADM; ?>app/adms/assets/vendor/php-email-form/validate.js"></script>
-<script src="<?php URLADM; ?>app/adms/assets/vendor/jquery-sticky/jquery.sticky.js"></script>
-<script src="<?php URLADM; ?>app/adms/assets/vendor/venobox/venobox.min.js"></script>
-<script src="<?php URLADM; ?>app/adms/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-<script src="<?php URLADM; ?>app/adms/assets/vendor/counterup/counterup.min.js"></script>
-<script src="<?php URLADM; ?>app/adms/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-<script src="<?php URLADM; ?>app/adms/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="<?php URLADM; ?>app/adms/assets/vendor/aos/aos.js"></script>
-<script src="<?php URLADM; ?>app/adms/assets/js/main.js"></script>
-<script src="<?php URLADM; ?>app/adms/assets/js/form-validation.js"></script>
-<script src="<?php URLADM; ?>app/adms/assets/js/sb-admin-2.min.js"></script>
-<script src="<?php URLADM; ?>app/adms/assets/js/personalizado.js"></script>
+<!-- jQuery (obrigatório primeiro) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<!-- Bootstrap 4 Bundle (inclui Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- jQuery Easing -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<!-- jQuery Sticky -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js"></script>
+<!-- Waypoints -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<!-- Counter-Up -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+<!-- OWL Carousel -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<!-- Isotope -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+<!-- AOS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
-<!-- Page level plugins -->
-<script src="<?php URLADM; ?>app/adms/assets/vendor/datatables/jquery.dataTables.min.js"></script>
-<script src="<?php URLADM; ?>app/adms/assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+<!-- JS Local -->
+<script src="<?php echo URLADM; ?>app/adms/assets/js/main.js"></script>
+<script src="<?php echo URLADM; ?>app/adms/assets/js/form-validation.js"></script>
+<script src="<?php echo URLADM; ?>app/adms/assets/js/sb-admin-2.min.js"></script>
+<script src="<?php echo URLADM; ?>app/adms/assets/js/personalizado.js"></script>
 
-<!-- Page level custom scripts -->
-<script src="<?php URLADM; ?>app/adms/assets/js/datatables-demo.js"></script>
-<script src="<?php URLADM; ?>app/adms/assets/js/demo.js"></script>
-
+<!-- DataTables -->
+<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap4.min.js"></script>
+<script src="<?php echo URLADM; ?>app/adms/assets/js/datatables-demo.js"></script>
+<script src="<?php echo URLADM; ?>app/adms/assets/js/demo.js"></script>
 
 </body>
 </html>

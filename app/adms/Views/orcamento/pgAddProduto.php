@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 if (!defined('R4F5CC')) {
     header("Location: /");
     die("Erro: Página não encontrada!");
@@ -63,8 +63,8 @@ if (isset($_SESSION['idlogado'])) {
                                                     </td>
                                                     <td><?php echo $valorForm['quantidade']; ?></td>
                                                     <td>
-                                                        <a class="" href="<?php echo URLADM . "addProdutoOrcamento?idorc_prod=" . $valorForm['idorc_prod'] . "&&idorcamentos=" . $valorForm['idorcamentos']; ?>"><i class="ico icofont-trash text-danger p-1"></i></a>
-                                                        <a class="" href="<?php echo URLADM . "addProdutoOrcamento?idorc_prod_reduzir=" . $valorForm['idorc_prod'] . "&&idorcamentos=" . $valorForm['quantidade']. "&&quantidade=" . $valorForm['quantidade']; ?>" title="Reduzir Produto"><i class="ico icofont-minus-circle text-warning"></i></a>
+                                                        <a class="" href="<?php echo URLADM . "addProdutoOrcamento?idorc_prod=" . $valorForm['idorc_prod'] . "&&idorcamentos=" . $valorForm['idorcamentos']; ?>"><i class="icofont icofont-trash text-danger p-1"></i></a>
+                                                        <a class="" href="<?php echo URLADM . "addProdutoOrcamento?idorc_prod_reduzir=" . $valorForm['idorc_prod'] . "&&idorcamentos=" . $valorForm['quantidade']. "&&quantidade=" . $valorForm['quantidade']; ?>" title="Reduzir Produto"><i class="icofont icofont-minus-circle text-warning"></i></a>
                                                     </td>
                                                 </tr>
                                                 <?php
@@ -164,7 +164,7 @@ if (isset($_SESSION['idlogado'])) {
                                         <img src="<?php echo URLADM . "app/adms/assets/foto/" . $valorForm['foto']; ?>" width="85" height="75" alt="center" class="rounded mx-auto d-block"/>
                                     </td>
                                     <td>
-                                        <a data-toggle="modal" data-target="#mais<?php echo $valorForm['idproduto']; ?> " title="Adicionar Produto"><i class="ico icofont-ui-check text-success px-2"></i></a>
+                                        <a data-toggle="modal" data-target="#mais<?php echo $valorForm['idproduto']; ?> " title="Adicionar Produto"><i class="icofont icofont-ui-check text-success px-2"></i></a>
                                     </td>
                                 </tr>
 

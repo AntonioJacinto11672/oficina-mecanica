@@ -22,6 +22,7 @@ if (!defined('R4F5CC')) {
 
 </div>
 <!-- End of Page Wrapper -->
+
 <!-- Logout Modal-->
 <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
      aria-hidden="true">
@@ -42,267 +43,120 @@ if (!defined('R4F5CC')) {
     </div>
 </div>
 
-<!-- Vendor JS Files -->
-<script src="<?php URLADM;?>app/adms/assets/vendor/jquery/jquery.min.js"></script>
-<script src="<?php URLADM;?>app/adms/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="<?php URLADM;?>app/adms/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-<script src="<?php URLADM;?>app/adms/assets/vendor/php-email-form/validate.js"></script>
-<script src="<?php URLADM;?>app/adms/assets/vendor/jquery-sticky/jquery.sticky.js"></script>
-<script src="<?php URLADM;?>app/adms/assets/vendor/venobox/venobox.min.js"></script>
-<script src="<?php URLADM;?>app/adms/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-<script src="<?php URLADM;?>app/adms/assets/vendor/counterup/counterup.min.js"></script>
-<script src="<?php URLADM;?>app/adms/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-<script src="<?php URLADM;?>app/adms/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="<?php URLADM;?>app/adms/assets/vendor/aos/aos.js"></script>
+<!-- jQuery (obrigatório primeiro) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<!-- Bootstrap 4 Bundle (inclui Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- jQuery Easing -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<!-- jQuery Sticky -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js"></script>
+<!-- Waypoints -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<!-- OWL Carousel -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<!-- Isotope -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+<!-- AOS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
-<!-- Template Main JS File -->
-<script src="<?php URLADM;?>app/adms/assets/js/main.js"></script>
+<!-- JS Local -->
+<script src="<?php echo URLADM; ?>app/adms/assets/js/main.js"></script>
+<script src="<?php echo URLADM; ?>app/adms/assets/js/personalizado.js"></script>
+<script src="<?php echo URLADM; ?>app/adms/assets/js/form-validation.js"></script>
 
-<script src="<?php URLADM; ?>app/adms/assets/js/personalizado.js"></script>
-<script src="<?php URLADM; ?>app/adms/assets/js/form-validation.js"></script>
-
-<!-- jQuery UI 1.11.4 -->
-<script src="<?php URLADM; ?>app/adms/assets/plugins/jquery-ui/jquery-ui.min.js"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<!-- jQuery UI -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
 <script>
-    $.widget.bridge('uibutton', $.ui.button)
+    if (typeof $.widget !== 'undefined' && typeof $.ui !== 'undefined') {
+        $.widget.bridge('uibutton', $.ui.button);
+    }
 </script>
 
-<!-- overlayScrollbars -->
-<script src="<?php URLADM; ?>app/adms/assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-<!-- AdminLTE App -->
-<script src="<?php URLADM; ?>app/adms/assets/dist/js/adminlte.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="<?php URLADM; ?>app/adms/assets/dist/js/demo.js"></script>
-<!-- ChartJS -->
-<script src="<?php URLADM; ?>app/adms/assets/plugins/chart.js/Chart.min.js"></script>
-<!-- Sparkline -->
-<script src="<?php URLADM; ?>app/adms/assets/plugins/sparklines/sparkline.js"></script>
-<!-- JQVMap -->
-<script src="<?php URLADM; ?>app/adms/assets/plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="<?php URLADM; ?>app/adms/assets/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-<!-- jQuery Knob Chart -->
-<script src="<?php URLADM; ?>app/adms/assets/plugins/jquery-knob/jquery.knob.min.js"></script>
-<!-- daterangepicker -->
-<script src="<?php URLADM; ?>app/adms/assets/plugins/moment/moment.min.js"></script>
-<script src="<?php URLADM; ?>app/adms/assets/plugins/daterangepicker/daterangepicker.js"></script>
+<!-- OverlayScrollbars -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.3/js/jquery.overlayScrollbars.min.js"></script>
+
+<!-- AdminLTE dist JS (local) -->
+<script src="<?php echo URLADM; ?>app/adms/assets/dist/js/adminlte.js"></script>
+<script src="<?php echo URLADM; ?>app/adms/assets/dist/js/demo.js"></script>
+
+<!-- Chart.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+
+<!-- Moment.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+<!-- Daterange picker -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.js"></script>
 <!-- Tempusdominus Bootstrap 4 -->
-<script src="<?php URLADM; ?>app/adms/assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/js/tempusdominus-bootstrap-4.min.js"></script>
 <!-- Summernote -->
-<script src="<?php URLADM; ?>app/adms/assets/plugins/summernote/summernote-bs4.min.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="<?php URLADM; ?>app/adms/assets/dist/js/pages/dashboard.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs4.min.js"></script>
 
+<!-- DataTables -->
+<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.5.0/js/responsive.bootstrap4.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.bootstrap4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.colVis.min.js"></script>
 
-<script src="<?php URLADM; ?>app/adms/assets/plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="<?php URLADM; ?>app/adms/assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="<?php URLADM; ?>app/adms/assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="<?php URLADM; ?>app/adms/assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-<script src="<?php URLADM; ?>app/adms/assets/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-<script src="<?php URLADM; ?>app/adms/assets/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-<script src="<?php URLADM; ?>app/adms/assets/plugins/jszip/jszip.min.js"></script>
-<script src="<?php URLADM; ?>app/adms/assets/plugins/pdfmake/pdfmake.min.js"></script>
-<script src="<?php URLADM; ?>app/adms/assets/plugins/pdfmake/vfs_fonts.js"></script>
-<script src="<?php URLADM; ?>app/adms/assets/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-<script src="<?php URLADM; ?>app/adms/assets/plugins/datatables-buttons/js/buttons.print.min.js"></script>
-<script src="<?php URLADM; ?>app/adms/assets/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 <!-- BS-Stepper -->
-<script src="<?php URLADM; ?>app/adms/assets/plugins/bs-stepper/js/bs-stepper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bs-stepper/1.7.0/js/bs-stepper.min.js"></script>
 
-<!-- Page specific script -->
+<!-- Page specific scripts -->
 <script>
     $(function () {
-        $("#example1").DataTable({
-            "responsive": true, "lengthChange": false, "autoWidth": false,
-            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-        $('#example2').DataTable({
-            "paging": true,
-            "lengthChange": false,
-            "searching": false,
-            "ordering": true,
-            "info": true,
-            "autoWidth": false,
-            "responsive": true,
-        });
+        if ($.fn.DataTable && $('#example1').length) {
+            $("#example1").DataTable({
+                "responsive": true, "lengthChange": false, "autoWidth": false,
+                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        }
+        if ($.fn.DataTable && $('#example2').length) {
+            $('#example2').DataTable({
+                "paging": true, "lengthChange": false, "searching": false,
+                "ordering": true, "info": true, "autoWidth": false, "responsive": true,
+            });
+        }
     });
 </script>
 
-<!-- Page specific script -->
-<script>
-    $(function () {
-        //Initialize Select2 Elements
-        $('.select2').select2()
-
-        //Initialize Select2 Elements
-        $('.select2bs4').select2({
-            theme: 'bootstrap4'
-        })
-
-        //Datemask dd/mm/yyyy
-        $('#datemask').inputmask('dd/mm/yyyy', {'placeholder': 'dd/mm/yyyy'})
-        //Datemask2 mm/dd/yyyy
-        $('#datemask2').inputmask('mm/dd/yyyy', {'placeholder': 'mm/dd/yyyy'})
-        //Money Euro
-        $('[data-mask]').inputmask()
-
-        //Date range picker
-        $('#reservationdate').datetimepicker({
-            format: 'L'
-        });
-        //Date range picker
-        $('#reservation').daterangepicker()
-        //Date range picker with time picker
-        $('#reservationtime').daterangepicker({
-            timePicker: true,
-            timePickerIncrement: 30,
-            locale: {
-                format: 'MM/DD/YYYY hh:mm A'
-            }
-        })
-        //Date range as a button
-        $('#daterange-btn').daterangepicker(
-                {
-                    ranges: {
-                        'Today': [moment(), moment()],
-                        'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-                        'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-                        'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-                        'This Month': [moment().startOf('month'), moment().endOf('month')],
-                        'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-                    },
-                    startDate: moment().subtract(29, 'days'),
-                    endDate: moment()
-                },
-                function (start, end) {
-                    $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
-                }
-        )
-
-        //Timepicker
-        $('#timepicker').datetimepicker({
-            format: 'LT'
-        })
-
-        //Bootstrap Duallistbox
-        $('.duallistbox').bootstrapDualListbox()
-
-        //Colorpicker
-        $('.my-colorpicker1').colorpicker()
-        //color picker with addon
-        $('.my-colorpicker2').colorpicker()
-
-        $('.my-colorpicker2').on('colorpickerChange', function (event) {
-            $('.my-colorpicker2 .fa-square').css('color', event.color.toString());
-        })
-
-        $("input[data-bootstrap-switch]").each(function () {
-            $(this).bootstrapSwitch('state', $(this).prop('checked'));
-        })
-
-    })
-    // BS-Stepper Init
-    document.addEventListener('DOMContentLoaded', function () {
-        window.stepper = new Stepper(document.querySelector('.bs-stepper'))
-    })
-
-    // DropzoneJS Demo Code Start
-    Dropzone.autoDiscover = false
-
-    // Get the template HTML and remove it from the doumenthe template HTML and remove it from the doument
-    var previewNode = document.querySelector("#template")
-    previewNode.id = ""
-    var previewTemplate = previewNode.parentNode.innerHTML
-    previewNode.parentNode.removeChild(previewNode)
-
-    var myDropzone = new Dropzone(document.body, {// Make the whole body a dropzone
-        url: "/target-url", // Set the url
-        thumbnailWidth: 80,
-        thumbnailHeight: 80,
-        parallelUploads: 20,
-        previewTemplate: previewTemplate,
-        autoQueue: false, // Make sure the files aren't queued until manually added
-        previewsContainer: "#previews", // Define the container to display the previews
-        clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
-    })
-
-    myDropzone.on("addedfile", function (file) {
-        // Hookup the start button
-        file.previewElement.querySelector(".start").onclick = function () {
-            myDropzone.enqueueFile(file)
-        }
-    })
-
-    // Update the total progress bar
-    myDropzone.on("totaluploadprogress", function (progress) {
-        document.querySelector("#total-progress .progress-bar").style.width = progress + "%"
-    })
-
-    myDropzone.on("sending", function (file) {
-        // Show the total progress bar when upload starts
-        document.querySelector("#total-progress").style.opacity = "1"
-        // And disable the start button
-        file.previewElement.querySelector(".start").setAttribute("disabled", "disabled")
-    })
-
-    // Hide the total progress bar when nothing's uploading anymore
-    myDropzone.on("queuecomplete", function (progress) {
-        document.querySelector("#total-progress").style.opacity = "0"
-    })
-
-    // Setup the buttons for all transfers
-    // The "add files" button doesn't need to be setup because the config
-    // `clickable` has already been specified.
-    document.querySelector("#actions .start").onclick = function () {
-        myDropzone.enqueueFiles(myDropzone.getFilesWithStatus(Dropzone.ADDED))
-    }
-    document.querySelector("#actions .cancel").onclick = function () {
-        myDropzone.removeAllFiles(true)
-    }
-    // DropzoneJS Demo Code End
-</script>
-<!-- W3 Slide de form e outros-->
+<!-- W3 Slide -->
 <script>
     var slideIndex = 1;
-    showDivs(slideIndex);
-
-    function plusDivs(n) {
-        showDivs(slideIndex += n);
+    if (document.getElementsByClassName("mySlides").length > 0) {
+        showDivs(slideIndex);
     }
 
-    function currentDiv(n) {
-        showDivs(slideIndex = n);
-    }
+    function plusDivs(n) { showDivs(slideIndex += n); }
+    function currentDiv(n) { showDivs(slideIndex = n); }
 
     function showDivs(n) {
         var i;
         var x = document.getElementsByClassName("mySlides");
         var dots = document.getElementsByClassName("demo");
-        if (n > x.length) {
-            slideIndex = 1
-        }
-        if (n < 1) {
-            slideIndex = x.length
-        }
-        ;
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].classList.remove("w3-blue");
-        }
-        x[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].classList.add("w3-blue");
+        if (n > x.length) { slideIndex = 1; }
+        if (n < 1) { slideIndex = x.length; }
+        for (i = 0; i < x.length; i++) { x[i].style.display = "none"; }
+        for (i = 0; i < dots.length; i++) { dots[i].classList.remove("w3-blue"); }
+        if (x[slideIndex - 1]) { x[slideIndex - 1].style.display = "block"; }
+        if (dots[slideIndex - 1]) { dots[slideIndex - 1].classList.add("w3-blue"); }
     }
 </script>
+
 <script>
-  $(function () {
-    //Add text editor
-    $('#compose-textarea').summernote()
-  })
+    $(function () {
+        if ($('#compose-textarea').length && $.fn.summernote) {
+            $('#compose-textarea').summernote();
+        }
+    });
 </script>
-</body>
-</html>
 
 </body>
 </html>

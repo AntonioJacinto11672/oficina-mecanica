@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 if (!defined('R4F5CC')) {
     header("Location: /");
     die("Erro: Página não encontrada!");
@@ -92,7 +92,7 @@ if (isset($_SESSION['idlogado'])) {
                                         </a>
                                     </td>
                                     <td>
-                                        <a href="<?php echo $valorForm['idproduto']; ?>" data-toggle="modal" data-target="#mais<?php echo $valorForm['idproduto']; ?>" title="adicionar Estoque"><i class="ico icofont-plus text-success px-2"></i></a>
+                                        <a href="<?php echo $valorForm['idproduto']; ?>" data-toggle="modal" data-target="#mais<?php echo $valorForm['idproduto']; ?>" title="adicionar Estoque"><i class="icofont icofont-plus text-success px-2"></i></a>
                                     </td>
                                 </tr>
                                 <!--  Modal Deletar-->

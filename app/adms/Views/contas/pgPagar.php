@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 if (!defined('R4F5CC')) {
     header("Location: /");
     die("Erro: Página não encontrada!");
@@ -176,14 +176,14 @@ if (isset($_SESSION['idlogado'])) {
                                     <td>
                                         <?php if ($valorForm['descricao'] != "Compra de Produto") { ?>
                                             <?php if ($valorForm['descricao'] != "Comissão") { ?>
-                                                <a href="<?php echo $valorForm['idcontas_apagar']; ?>" data-toggle="modal" data-target="#edit<?php echo $valorForm['idcontas_apagar']; ?>" title="Editar Registo"><i class="ico icofont-edit px-1"></i></a>
+                                                <a href="<?php echo $valorForm['idcontas_apagar']; ?>" data-toggle="modal" data-target="#edit<?php echo $valorForm['idcontas_apagar']; ?>" title="Editar Registo"><i class="icofont icofont-edit px-1"></i></a>
                                                 <?php
                                             }
                                         }
                                         ?>
-                                        <a href="<?php echo $valorForm['idcontas_apagar']; ?>" data-toggle="modal" data-target="#delete<?php echo $valorForm['idcontas_apagar']; ?>" title="Apagar Registo"><i class="ico icofont-trash text-danger px-1"></i></a>
+                                        <a href="<?php echo $valorForm['idcontas_apagar']; ?>" data-toggle="modal" data-target="#delete<?php echo $valorForm['idcontas_apagar']; ?>" title="Apagar Registo"><i class="icofont icofont-trash text-danger px-1"></i></a>
                                         <?php if ($valorForm['pago'] === "nao") { ?>
-                                            <a href="<?php echo $valorForm['idcontas_apagar']; ?>" data-toggle="modal" data-target="#info<?php echo $valorForm['idcontas_apagar']; ?>" title="Aprovar Conta"><i class="ico icofont-ui-clip-board text-success px-1"></i></a>
+                                            <a href="<?php echo $valorForm['idcontas_apagar']; ?>" data-toggle="modal" data-target="#info<?php echo $valorForm['idcontas_apagar']; ?>" title="Aprovar Conta"><i class="icofont icofont-ui-clip-board text-success px-1"></i></a>
                                         <?php }
                                         ?>
                                     </td>

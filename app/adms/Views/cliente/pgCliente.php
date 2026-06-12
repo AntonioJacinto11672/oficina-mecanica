@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 namespace App\adms\Controllers;
 
@@ -183,8 +183,8 @@ if (isset($_SESSION['idlogado'])) {
                                     <td><?php echo $valorForm['telefone']; ?></td>
                                     <td><?php echo $valorForm['email']; ?></td>
                                     <td>
-                                        <a href="<?php echo $valorForm['idclientes']; ?>" data-toggle="modal" data-target="#edit<?php echo $valorForm['idclientes']; ?>"><i class="ico icofont-edit px-1"></i></a>
-                                        <a href="<?php echo $valorForm['idclientes']; ?>" data-toggle="modal" data-target="#delete<?php echo $valorForm['idclientes']; ?>"><i class="ico icofont-trash text-danger px-1"></i></a>
+                                        <a href="<?php echo $valorForm['idclientes']; ?>" data-toggle="modal" data-target="#edit<?php echo $valorForm['idclientes']; ?>"><i class="icofont icofont-edit px-1"></i></a>
+                                        <a href="<?php echo $valorForm['idclientes']; ?>" data-toggle="modal" data-target="#delete<?php echo $valorForm['idclientes']; ?>"><i class="icofont icofont-trash text-danger px-1"></i></a>
                                         <a href="<?php echo $valorForm['idclientes']; ?>" data-toggle="modal" data-target="#info<?php echo $valorForm['idclientes']; ?>"><i class="fas fa-home text-info"></i></a>
                                     </td>
                                 </tr>

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 if (!defined('R4F5CC')) {
     header("Location: /");
     die("Erro: Página não encontrada!");
@@ -232,10 +232,10 @@ if (isset($_SESSION['idlogado'])) {
                                         </a>
                                     </td>
                                     <td>
-                                        <a href="<?php echo $valorForm['idproduto']; ?>" data-toggle="modal" data-target="#edit<?php echo $valorForm['idproduto']; ?>" title="Editar Registo"><i class="ico icofont-edit px-1"></i></a>
-                                        <a href="<?php echo $valorForm['idproduto']; ?>" data-toggle="modal" data-target="#delete<?php echo $valorForm['idproduto']; ?>" title="Apagar Registo"><i class="ico icofont-trash text-danger px-1"></i></a>
-                                        <a href="<?php echo $valorForm['idproduto']; ?>" data-toggle="modal" data-target="#info<?php echo $valorForm['idproduto']; ?>" title="Descrição"><i class="ico icofont-warning-alt text-primary px-1"></i></a>
-                                        <a href="<?php echo $valorForm['idproduto']; ?>" data-toggle="modal" data-target="#mais<?php echo $valorForm['idproduto']; ?>" title="Fazer Pedido"><i class="ico icofont-plus text-success px-2"></i></a>
+                                        <a href="<?php echo $valorForm['idproduto']; ?>" data-toggle="modal" data-target="#edit<?php echo $valorForm['idproduto']; ?>" title="Editar Registo"><i class="icofont icofont-edit px-1"></i></a>
+                                        <a href="<?php echo $valorForm['idproduto']; ?>" data-toggle="modal" data-target="#delete<?php echo $valorForm['idproduto']; ?>" title="Apagar Registo"><i class="icofont icofont-trash text-danger px-1"></i></a>
+                                        <a href="<?php echo $valorForm['idproduto']; ?>" data-toggle="modal" data-target="#info<?php echo $valorForm['idproduto']; ?>" title="Descrição"><i class="icofont icofont-warning-alt text-primary px-1"></i></a>
+                                        <a href="<?php echo $valorForm['idproduto']; ?>" data-toggle="modal" data-target="#mais<?php echo $valorForm['idproduto']; ?>" title="Fazer Pedido"><i class="icofont icofont-plus text-success px-2"></i></a>
                                     </td>
                                 </tr>
                                 <!--  Modal Deletar-->

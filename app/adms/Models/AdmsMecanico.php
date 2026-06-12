@@ -1050,7 +1050,7 @@ class AdmsMecanico extends Conn {
     }
 
     public function dadosMecanico() {
-        $dadosMecânico = "SELECT * FROM mecanicos";
+        $dadosMecânico = "SELECT m.*, u.st_conta FROM mecanicos m LEFT JOIN usuario u ON u.nbi = m.nbi AND u.nif = m.nif AND u.nivel = 'mecanico'";
         $result_resenceador = $this->conn->prepare($dadosMecânico);
         $result_resenceador->execute();
         $this->dados = $result_resenceador->fetchAll();
@@ -1192,7 +1192,7 @@ class AdmsMecanico extends Conn {
     //Recepcionista    
 
     public function dadosRecepcionista() {
-        $query_dadosRecep = "SELECT * FROM recepcionista";
+        $query_dadosRecep = "SELECT r.*, u.st_conta FROM recepcionista r LEFT JOIN usuario u ON u.nbi = r.nbi AND u.nif = r.nif AND u.nivel = 'recep'";
         $result_dadosRecep = $this->conn->prepare($query_dadosRecep);
         $result_dadosRecep->execute();
         $this->dados = $result_dadosRecep->fetchAll();
@@ -2734,74 +2734,41 @@ class AdmsMecanico extends Conn {
             $resul->execute();
 
             if ($resul->rowCount()) {
-                $query_supervisor = "UPDATE recepcionista SET st_conta=:st_conta, modified=NOW() WHERE idrecepcionista=:idrecepcionista";
-                $resul = $this->conn->prepare($query_supervisor);
-                $resul->bindParam(":idrecepcionista", $this->dados['idrecepcionista']);
-                $resul->bindParam(":st_conta", $this->dados['st_conta']);
-                $resul->execute();
-                if ($resul->rowCount()) {
-                    $_SESSION['msg'] = '
+                $_SESSION['msg'] = '
                 <div class="alert alert-success text-center" role="alert">
                     Operação Feita Com Sucesso
                 </div>
                 ';
-                } else {
-                    $_SESSION['msg'] = '
-                <div class="alert alert-danger text-center" role="alert">
-                    Operação Feita Sem Sucesso!
-                </div>
-                ';
-                    return false;
-                }
-
-
                 return true;
             } else {
                 $_SESSION['msg'] = '
                 <div class="alert alert-danger text-center" role="alert">
-                    Supervisor Estado da Conta Alterado Sem Sucesso!
+                    Estado da Conta Alterado Sem Sucesso!
                 </div>
                 ';
                 return false;
             }
         } elseif ($this->dados['usuario'] == "Mecanico") {
             $this->dados['senha'] = md5(rand(10000, 999999999));
-            
+
             $query_supervisor = "UPDATE usuario SET st_conta=:st_conta, senha=:senha, modified=NOW() WHERE idusuario=:idusuario";
             $resul = $this->conn->prepare($query_supervisor);
             $resul->bindParam(":idusuario", $this->dados['idusuario']);
             $resul->bindParam(":st_conta", $this->dados['st_conta']);
             $resul->bindParam(":senha", $this->dados['senha']);
             $resul->execute();
-            //var_dump($this->dados);
 
             if ($resul->rowCount()) {
-                $query_supervisor = "UPDATE mecanicos SET st_conta=:st_conta, modified=NOW() WHERE idmecanicos=:idmecanicos";
-                $resul = $this->conn->prepare($query_supervisor);
-                $resul->bindParam(":idmecanicos", $this->dados['idmecanicos']);
-                $resul->bindParam(":st_conta", $this->dados['st_conta']);
-                $resul->execute();
-                if ($resul->rowCount()) {
-                    $_SESSION['msg'] = '
+                $_SESSION['msg'] = '
                 <div class="alert alert-success text-center" role="alert">
                     Operação Feita Com Sucesso
                 </div>
                 ';
-                } else {
-                    $_SESSION['msg'] = '
-                <div class="alert alert-danger text-center" role="alert">
-                    Operação Feita Sem Sucesso!
-                </div>
-                ';
-                    return false;
-                }
-
-
                 return true;
             } else {
                 $_SESSION['msg'] = '
                 <div class="alert alert-danger text-center" role="alert">
-                    Supervisor Estado da Conta Alterado Sem Sucesso!
+                    Estado da Conta Alterado Sem Sucesso!
                 </div>
                 ';
                 return false;

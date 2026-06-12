@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 if (!defined('R4F5CC')) {
     header("Location: /");
     die("Erro: Página não encontrada!");
@@ -94,11 +94,11 @@ if (isset($_SESSION['idlogado'])) {
                                         ?>
                                         <?php echo $mecanico; ?></td>
                                     <td>
-                                        <a href="<?php echo URLADM."relatorioMecanica?relatorio=orcamento&idorcamentos=".$valorForm['idorcamentos']; ?>"  title="Imprimir Relatório"><i class="ico icofont-file-text text-success px-1"></i></a>
+                                        <a href="<?php echo URLADM."relatorioMecanica?relatorio=orcamento&idorcamentos=".$valorForm['idorcamentos']; ?>"  title="Imprimir Relatório"><i class="icofont icofont-file-text text-success px-1"></i></a>
                                         <?php if ($valorForm['status'] === "Aberto") { ?>
-                                            <a href="<?php echo $valorForm['idorcamentos']; ?>" data-toggle="modal" data-target="#delete<?php echo $valorForm['idorcamentos']; ?>" title="Apagar Registo"><i class="ico icofont-trash text-danger px-1"></i></a>
-                                            <a href="<?php echo URLADM . "addProdutoOrcamento?id=" . $valorForm['idorcamentos']; ?>" data-toggle="enviar" data-target="#aprovar<?php echo $valorForm['idorcamentos']; ?>" title="Enviar Email"><i class="ico icofont-envelope text-success px-1"></i></a>
-                                            <a href="<?php echo $valorForm['idorcamentos']; ?>" data-toggle="modal" data-target="#aprovar<?php echo $valorForm['idorcamentos']; ?>" title="Aprovar Orcamento"><i class="ico icofont-ui-check text-success px-2"></i></a>
+                                            <a href="<?php echo $valorForm['idorcamentos']; ?>" data-toggle="modal" data-target="#delete<?php echo $valorForm['idorcamentos']; ?>" title="Apagar Registo"><i class="icofont icofont-trash text-danger px-1"></i></a>
+                                            <a href="<?php echo URLADM . "addProdutoOrcamento?id=" . $valorForm['idorcamentos']; ?>" data-toggle="enviar" data-target="#aprovar<?php echo $valorForm['idorcamentos']; ?>" title="Enviar Email"><i class="icofont icofont-envelope text-success px-1"></i></a>
+                                            <a href="<?php echo $valorForm['idorcamentos']; ?>" data-toggle="modal" data-target="#aprovar<?php echo $valorForm['idorcamentos']; ?>" title="Aprovar Orcamento"><i class="icofont icofont-ui-check text-success px-2"></i></a>
                                         <?php
                                         }
                                         if (!($valorForm['status'] == "Aprovado")) {

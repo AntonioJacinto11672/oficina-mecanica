@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 if (!defined('R4F5CC')) {
     header("Location: /");
     die("Erro: Página não encontrada!");
@@ -96,13 +96,13 @@ if (isset($_SESSION['idlogado'])) {
                                         <?php echo @$mecanico; ?></td>
                                     <td><?php echo $valorForm['data']; ?></td>
                                     <td>   
-                                        <a href="<?php echo URLADM . "relatorioMecanica?relatorio=orcamento&idorcamentos=" . $valorForm['idorcamentos']; ?>"  title="Imprimir Relatório"><i class="ico icofont-file-text text-success px-1"></i></a>
+                                        <a href="<?php echo URLADM . "relatorioMecanica?relatorio=orcamento&idorcamentos=" . $valorForm['idorcamentos']; ?>"  title="Imprimir Relatório"><i class="icofont icofont-file-text text-success px-1"></i></a>
                                         <?php if ($valorForm['pago'] === "nao") { ?>
-                                            <a href="<?php echo $valorForm['idconntas_areceber']; ?>" data-toggle="modal" data-target="#edit<?php echo $valorForm['idconntas_areceber']; ?>" title="Editar"><i class="ico icofont-edit text-primary px-1"></i></a>
-                                            <a href="<?php echo $valorForm['idconntas_areceber']; ?>" data-toggle="modal" data-target="#pagar<?php echo $valorForm['idconntas_areceber']; ?>" title="Terminar Orçamento Pagar"><i class="ico icofont-ui-check text-success px-2"></i></a>
+                                            <a href="<?php echo $valorForm['idconntas_areceber']; ?>" data-toggle="modal" data-target="#edit<?php echo $valorForm['idconntas_areceber']; ?>" title="Editar"><i class="icofont icofont-edit text-primary px-1"></i></a>
+                                            <a href="<?php echo $valorForm['idconntas_areceber']; ?>" data-toggle="modal" data-target="#pagar<?php echo $valorForm['idconntas_areceber']; ?>" title="Terminar Orçamento Pagar"><i class="icofont icofont-ui-check text-success px-2"></i></a>
                                         <?php } ?>
                                         <?php if ($_SESSION['usuario'] == "adimin") { ?>
-                                            <a href="<?php echo $valorForm['idconntas_areceber']; ?>" data-toggle="modal" data-target="#delete<?php echo $valorForm['idconntas_areceber']; ?>" title="Pagar Já Não Vai se Pago"><i class="ico icofont-trash text-danger px-1"></i></a>
+                                            <a href="<?php echo $valorForm['idconntas_areceber']; ?>" data-toggle="modal" data-target="#delete<?php echo $valorForm['idconntas_areceber']; ?>" title="Pagar Já Não Vai se Pago"><i class="icofont icofont-trash text-danger px-1"></i></a>
                                         <?php } ?>
 
                                     </td>
